@@ -1,0 +1,188 @@
+.donate {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2a365e;
+  z-index: 99;
+  box-shadow: 0 3px 6px rgba($black, 0.16);
+  &__inner {
+    box-sizing: border-box;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    &-title {
+      display: flex;
+      align-items: center;
+      h4 {
+        line-height: 100%;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $white;
+        display: flex;
+        align-items: center;
+        span {
+        }
+      }
+      span {
+        width: 20px;
+        height: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 8px;
+        img {
+          width: 100%;
+        }
+      }
+      & > span {
+        display: none;
+      }
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      width: calc(100% - 260px);
+      max-width: 880px;
+      margin: 0 -5px;
+    }
+    &-item {
+      width: calc(26% - 10px);
+      max-width: 220px;
+      margin: 0 5px;
+      display: flex;
+      &:last-child {
+        width: 22%;
+        max-width: 170px;
+      }
+    }
+    .button {
+      width: 100%;
+      padding: 6px 20px;
+    }
+    .select {
+      width: 100%;
+    }
+    .input {
+      width: 100%;
+      input {
+        &::placeholder {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+// 1024px
+@mixin donate-lg-xlg {
+  .donate {
+    &__inner {
+      flex-direction: column;
+      padding: 0;
+      &-title {
+        padding: 13px 0;
+        justify-content: space-between;
+        cursor: pointer;
+        &.active {
+          span {
+            &::before {
+              transform: translate(-50%, -55%) rotate(180deg);
+            }
+          }
+        }
+        & > span {
+          display: flex;
+          width: 35px;
+          height: 35px;
+          background-color: $primary;
+          border-radius: 50%;
+          position: relative;
+          margin: 0;
+          &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid $white;
+            transform: translate(-50%, -70%);
+            transition: 0.3s ease;
+          }
+          img {
+            display: none;
+          }
+        }
+      }
+      &-row {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: 0.3s ease;
+        width: calc(100% + 10px);
+        max-width: unset;
+        transition: 0.3s ease;
+        &.active {
+          max-height: 300px;
+          opacity: 1;
+          padding: 6px 0 20px;
+        }
+      }
+      &-item {
+        max-width: unset;
+      }
+    }
+  }
+}
+// 750px
+@mixin donate-sm-md {
+  .donate {
+    &__inner {
+      &-row {
+        flex-wrap: wrap;
+      }
+      &-item {
+        margin: 5px;
+        &:nth-child(n) {
+          width: calc(50% - 10px);
+          max-width: unset;
+        }
+      }
+    }
+  }
+}
+// 540px
+@mixin donate-xsm-sm {
+  .donate {
+    &__inner {
+      &-item {
+        margin: 5px;
+        margin: 0 0 15px 0;
+        &:last-child {
+          margin: 0;
+        }
+        &:nth-child(n) {
+          width: 100%;
+          max-width: unset;
+        }
+      }
+      .select {
+        &.uniq {
+            select {
+                padding: 15px 35px 15px 15px;
+            }
+        }
+      }
+      .input {
+        input {
+            padding: 15px;
+        }
+      }
+      .button {
+        padding: 16px;
+      }
+    }
+  }
+}

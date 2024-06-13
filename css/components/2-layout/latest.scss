@@ -1,0 +1,112 @@
+.latest {
+  background-color: $primary;
+  padding: 30px 0 50px;
+  &__inner {
+    &-title {
+      text-align: center;
+      color: $white;
+      margin-bottom: 30px;
+    }
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px;
+    }
+    &-foot {
+      padding-top: 40px;
+    }
+    h3 {
+      margin-bottom: 18px;
+    }
+  }
+  &Item {
+    display: block;
+    width: calc(33.3% - 20px);
+    margin: 10px;
+    text-align: center;
+    &__image {
+      width: 100%;
+      padding-bottom: 62%;
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+    &__content {
+      background-color: $white;
+      padding: 20px 20px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h5 {
+      line-height: 25px;
+      margin-bottom: 16px;
+      color: $primary;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height:50px;
+    }
+    p {
+      line-height: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 60px;
+      margin-bottom: 30px;
+    }
+    b {
+      font-weight: 600;
+      color: #AAAAAA;
+      margin-bottom: 20px;
+    }
+    .button {
+      width: 100%;
+      max-width: 140px;
+    }
+  }
+}
+// 930px
+@mixin latest-md-lg {
+  .latest {
+    &Item {
+        width: calc(50% - 20px);
+    }
+  }
+}
+// 650px
+@mixin latest-sm-md-extra {
+  .latest {
+    &__inner {
+        &-row {
+            margin: 0;
+        }
+        &-foot {
+          padding-top: 20px;
+        }
+    }
+    &Item {
+        width: 100%;
+        margin: 0 0 20px 0;
+        &:nth-child(n + 5) {
+          display: none;
+        }
+        &__content {
+            align-items: center;
+        }
+    }
+  }
+}
+// 540px
+@mixin latest-xsm-sm {
+  .latest {
+  }
+}

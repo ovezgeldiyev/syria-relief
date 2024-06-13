@@ -1,0 +1,132 @@
+.donation {
+  position: relative;
+  padding-left: 50%;
+  min-height: calc(100vh - 60px);
+  background: #033576;
+  .instant {
+    margin-bottom: 50px;
+  }
+  &__image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    img {
+      @include fullImage;
+    }
+  }
+  &__inner {
+    padding: 40px 40px 120px 40px;
+  }
+  &__content {
+    max-width: 490px;
+    margin: 0 auto;
+    &-head {
+      margin-bottom: 30px;
+      h1 {
+        margin-bottom: 16px;
+      }
+    }
+    &-group {
+      margin-bottom: 50px;
+      h5 {
+        margin-bottom: 16px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      p.med {
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      a {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 500;
+        color: $white;
+        img {
+          width: 20px;
+          margin-right: 20px;
+        }
+      }
+    }
+    &-logo {
+      width: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      img {
+        width: 100%;
+      }
+    }
+    &-socials {
+      width: 100%;
+      display: flex;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 3;
+      a {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        background-color: #fff;
+        border-radius: 50%;
+        &:last-child {
+          margin: 0;
+        }
+        &.sm {
+          img {
+            width: 9px;
+          }
+        }
+        &.big {
+          img {
+            width: 19px;
+          }
+        }
+        img {
+          width: 15px;
+        }
+      }
+    }
+  }
+  color: $white;
+  h1 {
+    font-weight: 600;
+  }
+  p {
+    &.med {
+      font-weight: 400;
+    }
+  }
+}
+@mixin donation-xlg-xxlg {
+  .donation {
+    &__inner {
+      padding: 30px 30px 120px 30px;
+    }
+  }
+}
+@mixin donation-sm-md {
+  .donation {
+    padding-left: unset;
+    &__image {
+      display: none;
+    }
+    &__inner {
+      padding: 30px 20px 80px 20px;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.projects {
+  padding: 40px 0;
+  background-color: $primary;
+  &__inner {
+    &-title {
+      margin-bottom: 30px;
+      text-align: center;
+      color: $white;
+    }
+    &-slider {
+      margin: 0 -10px;
+      padding-bottom: 40px;
+    }
+    .slick {
+      &-track {
+        display: flex !important;
+      }
+      &-slide {
+        height: unset !important;
+        margin: 0 10px;
+      }
+      &-dots {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li {
+          width: 10px;
+          height: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0;
+          margin: 0 4px;
+          &.slick-active {
+            button {
+              background-color: $red-light;
+            }
+          }
+          button {
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $white;
+            transition: 0.3s ease;
+            cursor: pointer;
+            border-radius: 50%;
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    h3 {
+      margin-bottom: 18px;
+    }
+  }
+  &Item {
+    display: block;
+    text-align: center;
+    &__image {
+      padding-bottom: 62%;
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+    &__content {
+      background-color: $white;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h5 {
+      font-weight: 700;
+      color: $primary;
+      margin-bottom: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    p {
+      color: #404040;
+      line-height: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 60px;
+      margin-bottom: 30px;
+    }
+    b {
+      font-weight: 400;
+      color: #b5b5b5;
+      margin-bottom: 16px;
+    }
+    .button {
+      width: 100%;
+      max-width: 140px;
+      margin: auto 0 0 0;
+    }
+  }
+}
+// 650px
+@mixin projects-sm-md-extra {
+  .projects {
+    &__inner {
+      .slick {
+        &-list {
+          overflow: visible !important;
+        }
+      }
+    }
+  }
+}

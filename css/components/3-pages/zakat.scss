@@ -1,0 +1,92 @@
+.zakat {
+  background-color: #ebebeb;
+  padding: 40px 0;
+  &__inner {
+    &-title {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px 20px;
+    }
+    &-foot {
+      display: flex;
+      justify-content: center;
+    }
+    h3 {
+      span {
+        color: $primary;
+      }
+    }
+    .button {
+      width: 100%;
+      max-width: 180px;
+    }
+  }
+  &Item {
+    margin: 10px;
+    width: calc(33.3% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $white;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    &__icon {
+      width: 68px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 28px;
+      &.sm {
+        max-width: 53px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    h5 {
+        font-family: $mainFont;
+        font-weight: 700;
+      margin-bottom: 20px;
+    }
+  }
+}
+// 930px
+@mixin zakat-md-lg {
+  .zakat {
+    &__inner {
+
+    }
+    &Item {
+        width: calc(50% - 20px);
+    }
+  }
+}
+// 750px
+@mixin zakat-sm-md {
+  .zakat {
+  }
+}
+// 650px
+@mixin zakat-sm-md-extra {
+  .zakat {
+    padding: 30px 0;
+    &__inner {
+        &-row {
+            margin: 0 0 30px 0;
+        }
+    }
+    &Item {
+        width: 100%;
+        margin: 0 0 20px 0;
+        &:last-child {
+            margin: 0;
+        }
+    }
+  }
+}

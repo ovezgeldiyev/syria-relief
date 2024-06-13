@@ -1,0 +1,97 @@
+.vision {
+    background-color: $black;
+    position: relative;
+    padding: 90px 0;
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 75%;
+            height: 100%;
+            content: "";
+            background: linear-gradient(90deg, #000000, #00000010);
+            z-index: 1;
+          }
+        img {
+            @include fullImage;
+        }
+    }
+    &__inner {
+        position: relative;
+        z-index: 2;
+        &-content {
+            max-width: 500px;
+        }
+        &-play {
+            display: flex;
+            align-items: center;
+            &:hover {
+                opacity: 1;
+                h6 {
+                    text-decoration: underline;
+                }
+                svg {
+                    color: $primary;
+                }
+            }
+            span {
+                width: 20px;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 30px;
+                border-radius: 50%;
+                svg {
+                    width: 100%;
+                    height: 100%;
+                    color: $white;
+                    transition: .3s ease;
+                }
+            }
+            h6 {
+                color: $white;
+                font-weight: 800;
+                transition: .3s ease;
+            }
+        }
+        h2 {
+            margin-bottom: 18px;
+            color: $white;
+        }
+        p {
+            margin-bottom: 40px;
+            color: $white;
+        }
+    }
+}
+// 540px
+@mixin vision-xsm-sm {
+    .vision {
+        padding: 160px 0 40px;
+        &__inner {
+            &-play {
+                span {
+                    width: 60px;
+                    height: 60px;
+                    img {
+                        width: 19px;
+                    }
+                }
+                h6 {
+                    width: calc(100% - 80px);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,167 @@
+// 1450px
+@include xxxxlg-xxxxxlg {
+  // @include hero-xxxxlg-xxxxxlg;
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  @include hero-xxxlg-xxxxlg;
+}
+// 1250px
+@include xlg-xxlg-extra {
+  @include hero-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+  .auto__container {
+    padding: 0 30px;
+  }
+  h1 {
+    &.sm {
+      font-size: 70px;
+    }
+    &.lg {
+        font-size: 80px;
+    }
+  }
+  h2 {
+    font-size: 70px;
+  }
+  @include hero-xlg-xxlg;
+  @include nav-xlg-xxlg;
+}
+// 1024px
+@include lg-xlg {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .basket {
+    &Btn {
+        margin: 0;
+        &__icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 27px;
+            height: 24px;
+            img {
+                width: 100%
+            }
+        }
+        b {
+            display: none;
+        }
+    }
+  }
+  @include header-lg-xlg;
+  @include nav-lg-xlg;
+  @include hero-lg-xlg;
+  @include about-lg-xlg;
+  @include donate-lg-xlg;
+  @include footer-lg-xlg;
+}
+// 930px
+@include md-lg {
+  h1 {
+    &.sm {
+      font-size: 60px;
+    }
+    &.lg {
+        font-size:70px;
+    }
+  }
+  h2 {
+    font-size: 60px;
+  }
+
+  @include hero-md-lg;
+  @include join-md-lg;
+  @include zakat-md-lg;
+  @include reports-md-lg;
+  @include latest-md-lg;
+  @include calc-md-lg;
+}
+// 750px
+@include sm-md {
+  .auto__container {
+    padding: 0 20px;
+  }
+  .mobRemove {
+    display: none;
+  }
+  h1,
+  h2 {
+    &.sm {
+      font-size: 50px;
+    }
+    &.ex {
+      font-size: 50px;
+    }
+  }
+  @include hero-sm-md;
+  @include about-sm-md;
+  @include join-sm-md;
+  @include donate-sm-md;
+  @include reports-sm-md;
+  @include calc-sm-md;
+}
+// 650px
+@include sm-md-extra {
+  .auto__container {
+    &.sm {
+      padding: 0 35px;
+    }
+  }
+  @include hero-sm-md-extra;
+  @include differ-sm-md-extra;
+  @include projects-sm-md-extra;
+  @include zakat-sm-md-extra;
+  @include latest-sm-md-extra;
+  @include footer-sm-md-extra;
+}
+// 540px
+@include xsm-sm {
+  h1,
+  h2 {
+    &.sm {
+      font-size: 40px;
+    }
+    &.ex {
+      font-size: 40px;
+    }
+  }
+  h3 {
+    &.sm {
+      font-size: 30px;
+    }
+  }
+  .main{
+    &.sm {
+        padding-top: 60px;
+    }
+  }
+  .instant {
+    &__inner {
+        padding: 20px;
+    }
+  }
+  @include header-xsm-sm;
+  @include hero-xsm-sm;
+  @include join-xsm-sm;
+  @include donate-xsm-sm;
+  @include faq-xsm-sm;
+  @include reports-xsm-sm;
+  @include about-xsm-sm;
+}
+// 440px
+@include xxsm-xsm {
+  @include hero-xxsm-xsm;
+}
+// 390px
+@include xxxsm-xxsm {
+    .auto__container {
+        &.sm {
+        padding: 0 20px;
+        }
+    }
+  // @include hero-xxxsm-xxsm;
+}
